@@ -25,6 +25,8 @@
 
 ;;; Variables:
 
+(require 'borg)
+
 (defcustom borg-nix-shell-build-use-pure-shell t
   "Determine if nix-shells should be pure."
   :type 'boolean
