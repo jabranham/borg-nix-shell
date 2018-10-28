@@ -1,4 +1,4 @@
-;;; borg-nix-shell -- Nix-shell support for building Borg drones
+;;; borg-nix-shell -- Nix-shell support for building Borg drones  -*- lexical-binding: t; -*-
 
 ;; Copyright (c) 2017-2018 Thibault Polge <thibault@thb.lt>
 
