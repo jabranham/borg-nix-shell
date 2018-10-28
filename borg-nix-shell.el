@@ -35,7 +35,7 @@
 ;;; Code:
 
 (defun borg-nix-shell-borg-get (drone key &optional all)
-  "A reimplementation of `borg-get' for consistency.
+  "A reimplementation of `borg-get', which see for DRONE, KEY, and ALL.
 
 Since commit 89a939494e98056feb28da9f405e18cb140d7f22, (borg-get
 drone key nil) returns a string in some cases.
@@ -50,9 +50,9 @@ This function has consistent behavior regardless of the way Borg behaves"
 
 ;;;###autoload
 (defun borg-nix-shell-build-command (drone)
-  "Return a format string for wrapping a build-step in a nix-shell.
+  "Return a format string for wrapping a build-step in a `nix-shell'.
 
-The nix-shell is started with the file at
+The `nix-shell' is started with the file at
 submodules.DRONE.build-nix-shell-file or the packages at
 submodules.DRONE.build-nix-shell-packages.  If none of this is
 provided, and the package has no default.nix, it is run with the
