@@ -41,12 +41,10 @@ Since commit 89a939494e98056feb28da9f405e18cb140d7f22, (borg-get
 drone key nil) returns a string in some cases.
 
 This function has consistent behavior regardless of the way Borg behaves"
-(let ((ret (borg-get drone key all)))
-  (if all
-      ret
-      (if (listp ret)
-          ret
-          (list ret)))))
+  (let ((ret (borg-get drone key all)))
+    (cond (all ret)
+          ((listp ret) ret)
+          (t (list ret)))))
 
 ;;;###autoload
 (defun borg-nix-shell-build-command (drone)
